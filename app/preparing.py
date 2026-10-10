@@ -12,8 +12,8 @@ class Preparing:
         self.apply_potion_if_exist()
 
     def apply_armour(self) -> None:
-        for a in self.armour:
-            self.protection += a["protection"]
+        for armor in self.armour:
+            self.protection += armor["protection"]
 
     def apply_weapon(self) -> None:
         self.power += self.weapon["power"]

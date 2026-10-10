@@ -1,5 +1,5 @@
-from app.preparing import Preparing
 from app.battle import Battle
+from app.preparing import Preparing
 
 KNIGHTS = {
     "lancelot": {
@@ -89,25 +89,22 @@ KNIGHTS = {
 }
 
 
-def battle(knightsConfig: dict) -> None:
+def battle(knightsconfig: dict) -> None:
     # BATTLE PREPARATIONS:
 
     # lancelot
-    lancelot = Preparing(knightsConfig["lancelot"])
+    lancelot = Preparing(knightsconfig["lancelot"])
 
     # arthur
-    arthur = Preparing(knightsConfig["arthur"])
+    arthur = Preparing(knightsconfig["arthur"])
 
     # mordred
-    mordred = Preparing(knightsConfig["mordred"])
+    mordred = Preparing(knightsconfig["mordred"])
 
     # red_knight
-    red_knight = Preparing(knightsConfig["red_knight"])
+    red_knight = Preparing(knightsconfig["red_knight"])
 
-
-    # -------------------------------------------------------------------------------
     # BATTLE:
-
     # 1 Lancelot vs Mordred:
     first_battle = Battle(lancelot, mordred)
     first_battle.battle_result()
